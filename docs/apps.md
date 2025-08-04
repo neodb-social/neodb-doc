@@ -8,7 +8,7 @@ A few apps for NeoDB are being actively developed:
 
 - iOS
     - [Piecelet](https://piecelet.app) by `@piecelet@mastodon.social` - [App Store](https://apps.apple.com/app/piecelet-for-neodb/id6739444863) / [Source Code](https://github.com/lcandy2/neodb-app)
-    - [Chihu](https://chihu.app) by `@chihu@mastodon.social` - [App Store](https://apps.apple.com/app/chihu/id6737745206)
+    - [Chihu](https://chihu.app) by `@chihu@mastodon.social` - [App Store](https://apps.apple.com/app/chihu/id6737745206) / [Source Code](https://github.com/nunesdennis/Chihu)
     - [Fedicat](https://fedicat.com/) by `@fedicat@pc.cafe` - [TestFlight](https://testflight.apple.com/join/b6GatWTY) / [Source Code](https://codeberg.org/technicat/fedicat)
 - Android
     - NeoComment by `@mohammadrafigh@fosstodon.org` - [Source Code](https://github.com/mohammadrafigh/NeoComment/)
