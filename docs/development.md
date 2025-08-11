@@ -8,7 +8,7 @@ NeoDB is a Django project, and it runs side by side with a [modified version](ht
 
 Prerequisite
 ------------
-- Python 3.12.x
+- Python 3.13.x
 - Docker Compose v2 or newer
 
 
@@ -21,10 +21,10 @@ cd neodb
 git submodule update --init
 ```
 
-Install [rye](http://rye.astral.sh) package manager, packages and pre-commit hooks:
+Install [uv](https://docs.astral.sh/uv/) package manager, packages and pre-commit hooks:
 ```
-curl -sSf https://rye.astral.sh/get | bash
-rye sync
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv sync
 . .venv/bin/activate
 pre-commit install
 ```
@@ -89,7 +89,7 @@ When updating code, always update submodules:
 git pull
 git submodule update --init
 ```
-With newer git 2.15+, you main use `git pull --recurse-submodules` or `git config --global submodule.recurse true` to make it automatic.
+With newer git 2.15+, you may use `git pull --recurse-submodules` or `git config --global submodule.recurse true` to make it automatic.
 
 
 To save some typing, consider adding some aliases to `~/.profile`:
