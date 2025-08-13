@@ -31,7 +31,7 @@ pre-commit install
 
 To develop Takahe, install requirements(-dev) and pre-commit hooks for `neodb-takahe` project as well, preferably using a different virtual environment.
 
-Note: the virtual environments and packages installed in this step are mostly for linting, the actual virtual environments and packages are from NeoDB docker image, and they can be configured differently, more on this later in this document.
+Note: the virtual environments and packages installed in this step are mostly for type check, the actual virtual environments and packages for development runtime are from NeoDB docker image, and they can be configured differently, more on this later in this document.
 
 
 Start local instance for development
@@ -106,7 +106,7 @@ neodb-shell neodb-init
 
 Run unit test:
 ```
-neodb-manage test
+neodb-shell /neodb-venv/bin/pytest
 ```
 
 Update translations:
