@@ -56,7 +56,8 @@ if you are doing debug or development:
 
 ## Settings for external item sources
 
-- `SPOTIFY_API_KEY` - base64('CLIENT_ID:SECRET'), see [spotify doc](https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow)
+- `SPOTIFY_API_KEY` - see [spotify doc](https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow)
+<br>*Note: The value must be base64 **encoded**. Use `echo -n 'client-id:client-secret' | base64` to generate it.*
 - `TMDB_API_V3_KEY` - API v3 key from [TMDB](https://developer.themoviedb.org/)
 - `GOOGLE_API_KEY` - API key for [Google Books](https://developers.google.com/books/docs/v1/using)
 - `DISCOGS_API_KEY` - personal access token from [Discogs](https://www.discogs.com/settings/developers)
@@ -71,31 +72,10 @@ set either of these will enable translation
 
 ## Other maintenance tasks
 
-Add alias to your shell for easier access
+Add alias to your shell for easier access. Not necessary, just for convenience.
 
 ```
 alias neodb-manage='docker-compose --profile production run --rm shell neodb-manage'
-```
-
-Toggle user's active, staff and super user status
-
-```
-neodb-manage user --active <username>
-neodb-manage user --staff <username>
-neodb-manage user --super <username>
-```
-
-create a super user; delete a user / remote identity (`takahe-stator` and `neodb-worker` containers must be running to complete the deletion)
-```
-neodb-manage createsuperuser
-neodb-manage user --delete username
-neodb-manage user --delete username@remote.instance
-```
-
-Create an invite link
-
-```
-neodb-manage invite --create
 ```
 
 Manage user tasks and cron jobs
@@ -111,7 +91,7 @@ Rebuild search index
 neodb-manage catalog idx-reindex
 ```
 
-There are [more commands](usage/catalog.md) available to manage catalog.
+There are [more commands](usage/catalog.md) available to manage catalog and take a look at [Manage Accounts](accounts.md) to learn how to create an admin/staff account, create an invitation code and more.
 
 
 ## Run PostgresQL/Redis/Typesense without Docker

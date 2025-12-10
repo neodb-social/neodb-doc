@@ -81,10 +81,12 @@ You should see the same JSON response as above, and the site is now accessible t
 
 ## Register an account and make it admin
 
-Open `https://yourdomain.tld` in your browser and register an account, assuming username `admin`, run the following command to make it super user
+Open `https://yourdomain.tld` in your browser and register an account, assuming username is `admin`, run the following command to make it super user
 
 ```
 docker compose --profile production run --rm shell neodb-manage user --super admin
 ```
+Take a look at [Manage Accounts](accounts.md) for more information.
 
-Now your instance should be ready to serve. More tweaks are available, see [configuration](configuration.md) for options.
+## What now?
+Now your instance should be ready to serve. More tweaks are available, see [Configuration](configuration.md) for options.
